@@ -8,7 +8,6 @@ Financial tracking application to track bills, income, savings and budget with a
 
 ## Wireframes
 
-### Desktop Wireframes
 | Desktop |
 |---------|
 | [Desktop Homescreen](https://lucid.app/lucidchart/invitations/accept/inv_3ea4ef92-63c7-42ec-81f8-8ef9603816ab) |
@@ -17,7 +16,6 @@ Financial tracking application to track bills, income, savings and budget with a
 | [Desktop Budget Screen](https://lucid.app/lucidchart/invitations/accept/inv_edbf83d7-65ad-4327-9107-2d56301479ac) |
 | [Desktop Savings Screen](https://lucid.app/lucidchart/invitations/accept/inv_d2e1d8ca-f14d-4363-9d09-f90b40a07ea1) |
 
-### Tablet Wireframes
 | Tablet  |
 |---------|
 | [Tablet Homescreen](https://lucid.app/lucidchart/invitations/accept/inv_a2116a52-6161-4eda-bc00-f5cf4f047fbd) |
@@ -26,7 +24,6 @@ Financial tracking application to track bills, income, savings and budget with a
 | [Tablet Budget Screen](https://lucid.app/lucidchart/invitations/accept/inv_d42f422c-3c75-4973-b276-d368facb5870) |
 | [Tablet Savings Screen](https://lucid.app/lucidchart/invitations/accept/inv_febc3231-829d-4da4-b74b-741911e37815) |
 
-### Mobile WireFrames
 | Mobile |
 |---------|
 | [Mobile Homescreen](https://lucid.app/lucidchart/invitations/accept/inv_afb6c62d-3589-4f40-ac0d-211777839f10) |
