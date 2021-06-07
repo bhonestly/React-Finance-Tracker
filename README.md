@@ -97,20 +97,19 @@ Financial tracking application to track bills, income, savings and budget with a
 |-----------|----------|----------------|---------------|-------------|
 | Build out Pre-Project Approval Materials | H | 3hrs | 4hrs | 4hrs |
 | Calling API | H | 2hrs | N/A | N/A |
+| Display data on OverView page | H | 3hrs | N/A | N/A |
 | Create New Income Component | H | 3hrs | N/A | N/A |
 | Create New Expense Component | H | 3hrs | N/A | N/A |
-| Create Edit Income Component | H | 3hrs | N/A | N/A |
-| Create Edit Expense Component | H | 3hrs | N/A  | N/A  |
 | Create New Budget Component | H | 3hrs | N/A | N/A |
 | Create New Savings Component | H | 3hrs | N/A | N/A |
-| Create Edit Budget Component | H | 3hrs | N/A | N/A |
-| Create Edit Savings Component | H | 3hrs | N/A | N/A |
 | Create Delete Component | M | 3hrs | N/A | N/A |
 | Test/Refactor Code | M | 3hrs | N/A | N/A |
 | CSS for Menu Buttons | L | 3hrs | N/A | N/A |
-| CSS for List Items Render | L | 3hrs | N/A | N/A |
 | CSS Responsive Design | L | 3hrs | N/A | N/A |
-| TOTAL HOURS | H | hrs | N/A| N/A | N/A |
+| CSS Input fields | L | 3hrs | N/A | N/A |
+| CSS data view(income, expense, budget, savings) | L | 3hrs | N/A | N/A |
+| CSS for OverView page | L | 3hrs | N/A | N/A |
+| TOTAL HOURS | H | 40hrs | N/A| N/A | N/A |
 
 ## SWOT Analysis
 Strengths: Building Basic CRUD Structure
