@@ -37,7 +37,32 @@ Financial tracking application to track bills, income, savings and budget with a
 [Component Hierarchy](https://lucid.app/lucidchart/invitations/accept/inv_60eb5ba4-75c5-4dc4-8fd0-5c8b7342a6da?viewport_loc=-11%2C-55%2C2005%2C1067%2C0_0)
 
 ## API and Data Sample
-
+```json
+{
+    "records": [
+        {
+            "id": "recY5jTCR4yyPOEbs",
+            "fields": {
+                "title": "Groceries",
+                "type": "Expenses",
+                "financeType": "Budget",
+                "amount": 130,
+                "date": "2021-06-07T18:16:00.000Z"
+            },
+            "createdTime": "2021-06-07T12:27:47.000Z"
+        },
+        {
+            "id": "reciQMf1F9LbPVmhO",
+            "fields": {
+                "title": "Rent",
+                "type": "Expenses",
+                "financeType": "Budget",
+                "amount": 500,
+                "date": "2021-06-07T18:16:00.000Z"
+            },
+            "createdTime": "2021-06-07T12:27:47.000Z"
+        },
+```
 
 ## MVP
 
