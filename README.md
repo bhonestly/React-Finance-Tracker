@@ -66,15 +66,15 @@ Financial tracking application to track bills, income, savings and budget with a
 
 ## MVP
 
-Functioning Airtable API
-Display data fields
-Input forms for data fields
-User can input new data and have it render to page
-Use local storage to save user inputs
+1. Functioning Airtable API
+2. Display data fields
+3. Input forms for data fields
+4. User can input new data and have it render to page
+5 .Use local storage to save user inputs
 
 ## PostMVP
-Add second API
-Add Charts that input data on page for visual representation
+1. Add second API
+2. Add Charts that input data on page for visual representation
 
 ## Project Schedule
 |   Day   |   Deliverable   |   Status   |
