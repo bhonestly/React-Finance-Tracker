@@ -18,7 +18,7 @@ function App() {
           <div>New</div>
         </Route>
         <Route exact path="/incomes">
-          <IncomesList />
+          {/* <IncomesList /> */}
         </Route>
         <Route exact path="/expenses">
           <ExpensesList />
