@@ -20,7 +20,6 @@ function App() {
         <Route exact path="/incomes">
           <IncomesList />
         </Route>
-        
         <Route exact path="/expenses">
           <ExpensesList />
         </Route>
