@@ -79,6 +79,8 @@ Financial tracking application to track bills, income, savings and budget with a
 1. Add second API
 2. Add Charts that input data on page for visual representation
 3. Use local storage to save user inputs
+4. Add EDIT functionality to Income, Expense, Budget and Savings
+5. Add DELETE functionality to Income, Expense, Budget and Savings
 
 ## Project Schedule
 |   Day   |   Deliverable   |   Status   |
