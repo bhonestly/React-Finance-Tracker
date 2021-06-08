@@ -35,3 +35,12 @@ export const createExpensesItem = async (form) => {
     console.error(error);
   }
 };
+
+export const createIncomesItem = async (form) => {
+  try {
+    const res = await axios.post(`${baseURL}`, { fields: form }, config);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
