@@ -32,13 +32,13 @@ export default function IncomesList({data}) {
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
   console.log(incomeData)
-  
+
   return (
     <div>
       {incomeData.map(item => {
         return(
           <div>
-            <h2>{item.fields.title}</h2>
+            <h3>{item.fields.title}</h3>
             <p>{new Date(item.fields.date).toLocaleString()}</p>
             <p>{item.fields.amount}</p>
           </div>

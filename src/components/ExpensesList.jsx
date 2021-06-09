@@ -38,7 +38,7 @@ export default function ExpensesList({data}) {
       {expenseData.map(item => {
         return(
           <div>
-            <h2>{item.fields.title}</h2>
+            <h3>{item.fields.title}</h3>
             <p>{new Date(item.fields.date).toLocaleString()}</p>
             <p>{item.fields.amount}</p>
           </div>
