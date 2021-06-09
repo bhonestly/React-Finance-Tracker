@@ -21,13 +21,13 @@ export default function Home({data}) {
       Expenses Total: {expensesTotal}
     </div>
     <div className="total-line">
-    {incomesTotal}
+    Incomes Total: {incomesTotal}
     </div>
     <div className="total-line">
-    {budgetTotal}
+    Budget Total: {budgetTotal}
     </div>
     <div className="total-line">
-    {savingsTotal}
+    Savings Total: {savingsTotal}
     </div>
   </div>;
 }

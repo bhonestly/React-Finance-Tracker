@@ -32,6 +32,7 @@ export default function IncomesList({data}) {
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
   console.log(incomeData)
+  
   return (
     <div>
       {incomeData.map(item => {

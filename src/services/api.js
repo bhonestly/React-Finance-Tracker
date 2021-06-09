@@ -18,7 +18,7 @@ export const getAllFinances = async () => {
   }
 };
 
-export const createBudgetItem = async (form) => {
+export const createIncomesItem = async (form) => {
   try {
     const res = await axios.post(`${baseURL}`, { fields: form }, config);
     return res.data;
@@ -36,7 +36,7 @@ export const createExpensesItem = async (form) => {
   }
 };
 
-export const createIncomesItem = async (form) => {
+export const createBudgetItem = async (form) => {
   try {
     const res = await axios.post(`${baseURL}`, { fields: form }, config);
     return res.data;
