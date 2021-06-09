@@ -16,13 +16,18 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await getAllFinances();
-      console.log(res)
-      setData(res)
-    };
     fetchData();
   }, []);
+  
+  const fetchData = async () => {
+    const res = await getAllFinances();
+    console.log(res)
+    setData(res)
+  };
+
+  const reload = () => {
+    fetchData();
+  }
 
   return (
     <div className="App">
@@ -32,16 +37,16 @@ function App() {
           <div>New</div>
         </Route>
         <Route exact path="/incomes">
-          <IncomesList data={data} />
+          <IncomesList data={data} reload={reload}/>
         </Route>
         <Route exact path="/expenses">
-          <ExpensesList data={data} />
+          <ExpensesList data={data} reload={reload}/>
         </Route>
         <Route exact path="/budget">
-          <BudgetList data={data} />
+          <BudgetList data={data} reload={reload}/>
         </Route>
         <Route exact path="/savings">
-          <SavingsList data={data} />
+          <SavingsList data={data} reload={reload}/>
         </Route>
         <Route exact path="/">
           <Home data={data} />

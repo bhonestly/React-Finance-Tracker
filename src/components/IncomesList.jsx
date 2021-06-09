@@ -8,7 +8,7 @@ const defaultObject = {
   amount: "",
 }
 
-export default function IncomesList({data}) {
+export default function IncomesList({data, reload}) {
   const [input, setInput] = useState(defaultObject)
 
   const handleChange = (event) => {
@@ -28,6 +28,7 @@ export default function IncomesList({data}) {
     event.preventDefault()
     const result = await createIncomesItem(input)
     console.log(result)
+    reload()
   }
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
@@ -37,7 +38,7 @@ export default function IncomesList({data}) {
     <div>
       {incomeData.map(item => {
         return(
-          <div>
+          <div key={item.id}>
             <h3>{item.fields.title}</h3>
             <p>{new Date(item.fields.date).toLocaleString()}</p>
             <p>{item.fields.amount}</p>
