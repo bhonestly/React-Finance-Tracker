@@ -1,18 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllFinances } from "../services/api";
-import { Link } from 'react-router-dom'
 
-export default function Home() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await getAllFinances();
-      console.log(res)
-      setData(res)
-    };
-    fetchData();
-  }, []);
+export default function Home({data}) {
   
   const expenses = data.filter(item => item.fields.type === "expenses")
   console.log(expenses)
@@ -30,18 +19,18 @@ export default function Home() {
   console.log(savings)
   const savingsTotal = savings.reduce((accumulator, current) => accumulator + current.fields.amount, 0);
 
-  return <div>
-    {expensesTotal}
+  return <div id="totals">
+    <div className="total-line">
+      Expenses Total: {expensesTotal}
+    </div>
+    <div className="total-line">
     {incomesTotal}
+    </div>
+    <div className="total-line">
     {budgetTotal}
+    </div>
+    <div className="total-line">
     {savingsTotal}
-    {data.map(item => {
-      return <div key={item.id}>
-        <Link to={`/data/${item.id}`}>{item.fields.title}</Link>
-        </div>
-    })}
-    <div>
-      
     </div>
   </div>;
 }
