@@ -3,14 +3,14 @@
 }
 
 #totals {
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
   margin: 20px;
   border-radius: 10px;
 }
 
 .total-line {
-  background-color: blue;
-  border: 1px solid white;
+  background-color: rgb(69, 69, 159);
+  border: 1px solid rgb(255, 255, 255);
   padding: 10px;
 }
 

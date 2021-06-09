@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -26,25 +26,27 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />     
+      <NavBar />
+      <Switch>
         <Route exact path="/new">
           <div>New</div>
         </Route>
         <Route exact path="/incomes">
-          <IncomesList data={data}/>
+          <IncomesList data={data} />
         </Route>
         <Route exact path="/expenses">
-          <ExpensesList data={data}/>
+          <ExpensesList data={data} />
         </Route>
         <Route exact path="/budget">
-          <BudgetList data={data}/>
+          <BudgetList data={data} />
         </Route>
         <Route exact path="/savings">
-          <SavingsList data={data}/>
+          <SavingsList data={data} />
         </Route>
         <Route exact path="/">
-          <Home data={data}/>
+          <Home data={data} />
         </Route>
+      </Switch>
       <Footer />
     </div>
   );

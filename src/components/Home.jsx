@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import { getAllFinances } from "../services/api";
-
 export default function Home({data}) {
   
   const expenses = data.filter(item => item.fields.type === "expenses")
