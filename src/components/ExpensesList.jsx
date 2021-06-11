@@ -50,7 +50,7 @@ export default function ExpensesList({ data, reload }) {
 
   const handleEditSubmit = async (event) => {
     event.preventDefault()
-    const result = await editItem(id, modalData)
+    await editItem(id, modalData)
     reload()
     setOpenModal(false)
   }
