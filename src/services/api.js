@@ -53,3 +53,21 @@ export const createSavingsItem = async (form) => {
     console.error(error);
   }
 };
+
+export const editItem = async (id, form) => {
+  try {
+    const res = await axios.put(`${baseURL}/${id}`, { fields: form }, config);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export const deleteItem = async (id) => {
+  try {
+    const res = await axios.delete(`${baseURL}/${id}`, config);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+}

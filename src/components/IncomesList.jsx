@@ -8,7 +8,7 @@ const defaultObject = {
   amount: "",
 }
 
-export default function IncomesList({data, reload}) {
+export default function IncomesList({ data, reload }) {
   const [input, setInput] = useState(defaultObject)
 
   const handleChange = (event) => {
@@ -35,32 +35,33 @@ export default function IncomesList({data, reload}) {
   console.log(incomeData)
 
   return (
-    <div>
-      {incomeData.map(item => {
-        return(
-          <div key={item.id}>
-            <h3>{item.fields.title}</h3>
-            <p>{new Date(item.fields.date).toLocaleString()}</p>
-            <p>{item.fields.amount}</p>
-          </div>
-        )
-      })}
-
-    <form onChange={handleChange} onSubmit={handleSubmit}>
-      <label>Name:</label>
-      <input type="text" name="title"/>
-      <br />
-      <label>Type:</label>
-      <input type="text" name="type"/>
-      <br />
-      <label>Date:</label>
-      <input type="date" name="date"/>
-      <br />
-      <label>Amount:</label>
-      <input type="number" name="amount"/>
-      <br />
-      <button type="submit">Create Incomes Item</button>
-      </form>
-    </div>
+    <>
+      <div class="input-card">
+        <form onChange={handleChange} onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input type="text" name="title" />
+          <br />
+          <label>Type:</label>
+          <input type="text" name="type" />
+          <br />
+          <label>Date:</label>
+          <input type="date" name="date" />
+          <br />
+          <label>Amount:</label>
+          <input type="number" name="amount" />
+          <br />
+          <button type="submit">Create Incomes Item</button>
+        </form>
+      </div>
+        {incomeData.map(item => {
+          return (
+      <div className="finance-card">
+              <h3>{item.fields.title}</h3>
+              <p>{new Date(item.fields.date).toLocaleString()}</p>
+              <p>{item.fields.amount}</p>
+            </div>
+          )
+        })}
+    </>
   )
 }

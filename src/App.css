@@ -2,18 +2,75 @@
   text-align: center;
 }
 
+.nav a {
+  color: black
+}
+
+.nav a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+.nav a:link {
+  text-decoration: none;
+}
+
+.nav {
+  background-color: rgb(211, 35, 35);
+  border-radius: 10px;
+  border: 2px solid;
+  max-width: 200px;
+}
+
 #totals {
   background-color: rgb(0, 0, 0);
   margin: 20px;
   border-radius: 10px;
+  max-width: 400px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .total-line {
-  background-color: rgb(69, 69, 159);
-  border: 1px solid rgb(255, 255, 255);
-  padding: 10px;
+  background-color: rgb(228, 61, 153);
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .total-line > * {
   margin: 0, 20px;
+}
+
+.input-card {
+  border: 2px solid black;
+  width: 250px;
+  height: 150px;
+  background-color: rgb(65, 133, 74);
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+}
+
+.finance-card {
+  display: grid;
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  background-color: rgb(155, 140, 210);
+  /* flex-wrap: wrap; */
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.modal {
+  background: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  bottom: 30%;
+  right: 30%;
+  left: 30%;
 }
