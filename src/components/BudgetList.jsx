@@ -69,25 +69,22 @@ export default function BudgetList({ data, reload }) {
             <label><strong>Name:</strong></label>
             <input type="text" name="title" />
           </div>
-
           <div className="row-two">
             <label><strong>Type:</strong></label>
             <input type="text" name="type" />
           </div>
-
           <div className="row-three">
             <label><strong>Date:</strong></label>
             <input type="date" name="date" />
           </div>
-
           <div className="row-four">
             <label><strong>Amount:</strong></label>
             <input type="number" name="amount" />
           </div>
-
           <button className="budget-button" type="submit">Create Budget Item</button>
         </form>
       </div>
+      
       {budgetData.map(item => {
         return (
           <>
