@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { createIncomesItem } from '../services/api';
+import { editItem, deleteItem } from '../services/api'
 
 const defaultObject = {
   title: "",
@@ -10,6 +11,9 @@ const defaultObject = {
 
 export default function IncomesList({ data, reload }) {
   const [input, setInput] = useState(defaultObject)
+  const [openModal, setOpenModal] = useState(false)
+  const [modalData, setModalData] = useState("")
+  const [id, setId] = useState("")
 
   const handleChange = (event) => {
     let { name, value } = event.target
@@ -24,15 +28,38 @@ export default function IncomesList({ data, reload }) {
     }))
   }
 
+  const handleEditChange = (event) => {
+    let { name, value } = event.target
+    if (name === "amount") {
+      value = event.target.valueAsNumber
+    }
+    setModalData((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }))
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault()
     const result = await createIncomesItem(input)
     console.log(result)
-    reload()
   }
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
   console.log(incomeData)
+
+  const handleEditSubmit = async (event) => {
+    event.preventDefault()
+    const result = await editItem(id, modalData)
+    reload()
+    setOpenModal(false)
+  }
+
+  const handleDelete = () => {
+    deleteItem(id)
+    reload()
+    setOpenModal(false)
+  }
 
   return (
     <>
@@ -55,13 +82,31 @@ export default function IncomesList({ data, reload }) {
       </div>
         {incomeData.map(item => {
           return (
-      <div className="finance-card">
+            <>
+<div onClick={() => {
+              setOpenModal(true)
+              setModalData(item.fields)
+              setId(item.id)
+              }} 
+              className="finance-card">
               <h3>{item.fields.title}</h3>
               <p>{new Date(item.fields.date).toLocaleString()}</p>
               <p>{item.fields.amount}</p>
             </div>
+            </>
           )
         })}
+        {openModal? 
+        <div className="modal">
+          <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
+          <input name="title" type="text" value={modalData.title}/>
+          <input name="date" type="date" value={modalData.date}/>
+          <input name="amount" type="number" value={modalData.amount}/>
+          <button>Edit</button>
+          </form>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
+        :""}
     </>
   )
 }

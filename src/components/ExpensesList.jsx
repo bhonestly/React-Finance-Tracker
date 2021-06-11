@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { createExpensesItem } from '../services/api';
 import { editItem, deleteItem } from '../services/api'
 
-
 const defaultObject = {
   title: "",
   type: "",
