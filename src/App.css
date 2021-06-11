@@ -1,46 +1,46 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .nav a {
-  color: rgb(0, 0, 0)
-}
-
-.nav a:visited{
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-.nav a:link {
-  text-decoration: none;
-}
+
 
 .nav {
-  background-color: rgb(211, 35, 35);
+  /* background-color: rgb(211, 35, 35);
   border-radius: 10px;
   border: 2px solid;
   max-width: 170px;
   display: grid;
-  /* justify-content: space-evenly; */
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: center;
 }
 
 .inner-navs {
-  padding-bottom: 10px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 7px;
-  border: 1px solid rgb(0, 0, 0);
-  width: 100px;
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid rgb(0, 0, 0); */
+  /* width: 100px; */
 }
 
-.home-nav {
-  background-color: rgb(211, 35, 35);
-  border-radius: 10px;
-  border: 2px solid;
-  max-width: 170px;
-  display: grid;
-  /* justify-content: space-evenly; */
-  grid-template-columns: 1fr 1fr 1fr;
+p {
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(171, 57, 57);
+  border-radius: 7px;
 }
 
 .inner-home-nav {
@@ -77,24 +77,36 @@
 }
 
 .input-card {
+  
   border: 2px solid rgb(0, 0, 0);
   width: 250px;
   height: 150px;
   background-color: rgb(65, 133, 74);
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px auto;
   display: flex;
   text-align: left;
 }
 
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.form-row > label {
+  padding: 20px;
+
+}
+
 .finance-card {
-  display: grid;
+  /* display: grid; */
   /* flex-direction: row; */
   /* justify-content: space-around; */
   background-color: rgb(155, 140, 210);
   /* flex-wrap: wrap; */
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
 }
 
 .modal {
@@ -108,4 +120,9 @@
   left: 30%;
   display: flex;
   flex-direction: column;
+}
+
+img {
+  height: 100px;
+  object-fit: contain;
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 import NavBar from "./components/NavBar";
@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   const fetchData = async () => {
     const res = await getAllFinances();
     console.log(res)
@@ -31,22 +31,29 @@ function App() {
 
   return (
     <div className="App">
+      <div className="app-title">
+        <Link to="/">
+          <h1>
+            Finance Finatics
+          </h1>
+        </Link>
+      </div>
       <NavBar />
       <Switch>
         <Route exact path="/new">
           <div>New</div>
         </Route>
         <Route exact path="/incomes">
-          <IncomesList data={data} reload={reload}/>
+          <IncomesList data={data} reload={reload} />
         </Route>
         <Route exact path="/expenses">
-          <ExpensesList data={data} reload={reload}/>
+          <ExpensesList data={data} reload={reload} />
         </Route>
         <Route exact path="/budget">
-          <BudgetList data={data} reload={reload}/>
+          <BudgetList data={data} reload={reload} />
         </Route>
         <Route exact path="/savings">
-          <SavingsList data={data} reload={reload}/>
+          <SavingsList data={data} reload={reload} />
         </Route>
         <Route exact path="/">
           <Home data={data} />

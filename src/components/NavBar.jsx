@@ -4,37 +4,26 @@ import { Link } from 'react-router-dom'
 export default function NavBar() {
   return (
     <div className="nav">
-      <ul>
         <div className="inner-navs">
           <Link to="/incomes">
-            <li>Incomes</li>
+            <p>Incomes</p>
           </Link>
         </div>
         <div className="inner-navs">
           <Link to="/expenses">
-            <li>Expenses</li>
+            <p>Expenses</p>
           </Link>
         </div>
         <div className="inner-navs">
           <Link to="/budget">
-            <li>Budget</li>
+            <p>Budget</p>
           </Link>
         </div>
         <div className="inner-navs">
           <Link to="/savings">
-            <li>Savings</li>
+            <p>Savings</p>
           </Link>
         </div>
-      </ul>
-      <ul>
-        <div className="home-nav">
-          <div className="inner-home-nav">
-            <Link to="/">
-              <li>Home</li>
-            </Link>
-          </div>
-        </div>
-      </ul>
     </div>
   )
 }

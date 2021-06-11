@@ -65,16 +65,16 @@ export default function BudgetList({ data, reload }) {
     <>
       <div className="input-card">
         <form onChange={handleChange} onSubmit={handleSubmit}>
-          <label>Name:</label>
+          <label className="form-row">Name:</label>
           <input type="text" name="title" />
           <br />
-          <label>Type:</label>
+          <label className="form-row">Type:</label>
           <input type="text" name="type" />
           <br />
-          <label>Date:</label>
+          <label className="form-row">Date:</label>
           <input type="date" name="date" />
           <br />
-          <label>Amount:</label>
+          <label className="form-row">Amount:</label>
           <input type="number" name="amount" />
           <br />
           <button type="submit">Create Budget Item</button>
