@@ -81,10 +81,10 @@ export default function BudgetList({ data, reload }) {
             <label><strong>Amount:</strong></label>
             <input type="number" name="amount" />
           </div>
-          <button className="budget-button" type="submit">Create Budget Item</button>
+          <button className="input-button" type="submit">Create Budget Item</button>
         </form>
       </div>
-      
+
       {budgetData.map(item => {
         return (
           <>
