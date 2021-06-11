@@ -65,48 +65,56 @@ export default function BudgetList({ data, reload }) {
     <>
       <div className="input-card">
         <form onChange={handleChange} onSubmit={handleSubmit}>
-          <label className="form-row">Name:</label>
-          <input type="text" name="title" />
-          <br />
-          <label className="form-row">Type:</label>
-          <input type="text" name="type" />
-          <br />
-          <label className="form-row">Date:</label>
-          <input type="date" name="date" />
-          <br />
-          <label className="form-row">Amount:</label>
-          <input type="number" name="amount" />
-          <br />
-          <button type="submit">Create Budget Item</button>
+          <div className="row-one">
+            <label><strong>Name:</strong></label>
+            <input type="text" name="title" />
+          </div>
+
+          <div className="row-two">
+            <label><strong>Type:</strong></label>
+            <input type="text" name="type" />
+          </div>
+
+          <div className="row-three">
+            <label><strong>Date:</strong></label>
+            <input type="date" name="date" />
+          </div>
+
+          <div className="row-four">
+            <label><strong>Amount:</strong></label>
+            <input type="number" name="amount" />
+          </div>
+
+          <button className="budget-button" type="submit">Create Budget Item</button>
         </form>
       </div>
-        {budgetData.map(item => {
-          return (
-            <>
-              <div onClick={() => {
-                setOpenModal(true)
-                setModalData(item.fields)
-                setId(item.id)
-              }}
-                className="finance-card">
-                <h3>{item.fields.title}</h3>
-                <p>{new Date(item.fields.date).toLocaleString()}</p>
-                <p>{item.fields.amount}</p>
-              </div>
-            </>
-          )
-        })}
-        {openModal ?
-          <div className="modal">
-            <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
-              <input name="title" type="text" value={modalData.title} />
-              <input name="date" type="date" value={modalData.date} />
-              <input name="amount" type="number" value={modalData.amount} />
-              <button>Edit</button>
-            </form>
-            <button onClick={handleDelete}>Delete</button>
-          </div>
-          : ""}
+      {budgetData.map(item => {
+        return (
+          <>
+            <div onClick={() => {
+              setOpenModal(true)
+              setModalData(item.fields)
+              setId(item.id)
+            }}
+              className="finance-card">
+              <h3>{item.fields.title}</h3>
+              <p>{new Date(item.fields.date).toLocaleString()}</p>
+              <p>{item.fields.amount}</p>
+            </div>
+          </>
+        )
+      })}
+      {openModal ?
+        <div className="modal">
+          <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
+            <input name="title" type="text" value={modalData.title} />
+            <input name="date" type="date" value={modalData.date} />
+            <input name="amount" type="number" value={modalData.amount} />
+            <button>Edit</button>
+          </form>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
+        : ""}
     </>
-      )
+  )
 }
