@@ -39,7 +39,7 @@
 p {
   padding: 5px;
   margin: 5px;
-  background-color: rgb(171, 57, 57);
+  background-color: rgb(228, 61, 153);
   border-radius: 7px;
 }
 
@@ -120,10 +120,14 @@ input {
   /* display: grid; */
   /* flex-direction: row; */
   /* justify-content: space-around; */
-  background-color: rgb(155, 140, 210);
+  background-color: rgb(0, 0, 0);
   /* flex-wrap: wrap; */
   width: 100%;
   /* grid-template-columns: 1fr 1fr 1fr; */
+}
+
+.finance-card > h3 {
+  color: white;
 }
 
 .modal {

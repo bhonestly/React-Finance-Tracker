@@ -86,10 +86,10 @@ Financial tracking application to track bills, income, savings and budget with a
 |   Day   |   Deliverable   |   Status   |
 |---------|-----------------|------------|
 | June 14-16 | Prompt / Wireframes / Priority Matrix / Timeframes| Complete |
-| June 7 | Project Approval / Initial Application Structure / Pseudocode / Basic Desktop Component Hierarchy | Incomplete |
-| June 8 | Basic Tablet/Mobile Component Hierarchy | Incomplete |
-| June 9 | Initial Clickable Model | Incomplete |
-| June 10 | MVP | Incomplete |
+| June 7 | Project Approval / Initial Application Structure / Pseudocode / Basic Desktop Component Hierarchy | Complete |
+| June 8 | Basic Tablet/Mobile Component Hierarchy | Complete |
+| June 9 | Initial Clickable Model | Complete |
+| June 10 | MVP | Complete |
 | June 11 | CSS Buildout | Incomplete |
 | June 12-13 | Post MVP & CSS Final Touches | Incomplete |
 | June 14 | Presentation of Project | Incomplete |
