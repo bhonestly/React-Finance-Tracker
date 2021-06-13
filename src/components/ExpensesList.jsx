@@ -110,6 +110,7 @@ export default function ExpensesList({ data, reload }) {
             <button>Edit</button>
           </form>
           <button onClick={handleDelete}>Delete</button>
+          <button>Close</button>
         </div>
         : ""}
     </>

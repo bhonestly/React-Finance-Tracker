@@ -25,7 +25,7 @@ Financial tracking application to track bills, income, savings and budget with a
 | [Tablet Savings Screen](https://lucid.app/lucidchart/invitations/accept/inv_febc3231-829d-4da4-b74b-741911e37815) |
 
 | Mobile |
-|---------|
+|--------|
 | [Mobile Homescreen](https://lucid.app/lucidchart/invitations/accept/inv_afb6c62d-3589-4f40-ac0d-211777839f10) |
 | [Mobile Incomes screen](https://lucid.app/lucidchart/invitations/accept/inv_ead0d304-c1cf-4ed5-8b50-b56f55623644) |
 | [Mobile Expenses Screen](https://lucid.app/lucidchart/invitations/accept/inv_6964404b-4420-4f6e-b2d3-b98e8e445273) |

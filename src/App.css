@@ -2,15 +2,20 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  background-color: rgb(0, 0, 0);
 }
 
 .app-title a {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(27, 27, 58);
+}
+
+h1 {
+  color: white;
 }
 
 .nav a {
-  color: rgb(0, 0, 0);
+  color: rgb(27, 27, 58);
   text-decoration: none;
 }
 
@@ -39,32 +44,35 @@
 p {
   padding: 5px;
   margin: 5px;
-  background-color: rgb(228, 61, 153);
+  background-color: rgb(242, 0, 137);
   border-radius: 7px;
+  max-width: 600px;
+  color: white;
 }
 
 .inner-home-nav {
   padding-bottom: 10px;
   background-color: rgb(255, 255, 255);
   border-radius: 7px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(45, 0, 244);
   width: 100px;
 }
 
 #totals {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(47, 16, 184);
   margin: 20px;
   border-radius: 10px;
   max-width: 400px;
-  min-width: 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  color: white;
 }
 
 .total-line {
-  background-color: rgb(228, 61, 153);
-  border: 2px solid rgb(0, 0, 0);
+  background-color:  rgb(242, 0, 137);
+  border: 2px solid rgb(106, 0, 244);
   padding: 20px;
   border-radius: 10px;
   margin: 15px;
@@ -83,15 +91,16 @@ p {
 
 .input-card {
   
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(27, 27, 58);
   width: 350px;
   height: 200px;
-  background-color: rgb(65, 133, 74);
+  background-color: rgb(106, 51, 194);
   border-radius: 10px;
   margin: 20px auto;
   /* display: flex; */
   justify-content: flex-start;
   /* list-style-type: none; */
+  color: white;
 }
 
 .row-four > input {
@@ -117,10 +126,11 @@ input {
 }
 
 .finance-card {
-  /* display: grid; */
+  /* display: flex;
+  justify-content: center; */
   /* flex-direction: row; */
   /* justify-content: space-around; */
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(47, 16, 184);
   /* flex-wrap: wrap; */
   width: 100%;
   /* grid-template-columns: 1fr 1fr 1fr; */
@@ -146,4 +156,20 @@ input {
 img {
   height: 100px;
   object-fit: contain;
+}
+
+@media only screen and (min-device-width: 1280px) {
+  .data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .earthquake-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
 }
