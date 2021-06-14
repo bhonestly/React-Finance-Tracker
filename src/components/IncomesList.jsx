@@ -84,23 +84,28 @@ export default function IncomesList({ data, reload }) {
           <button className="input-button" type="submit">Create Income Item</button>
         </form>
       </div>
-
-      {incomeData.map(item => {
-        return (
-          <>
-            <div onClick={() => {
-              setOpenModal(true)
-              setModalData(item.fields)
-              setId(item.id)
-            }}
-              className="finance-card">
-              <h3>{item.fields.title}</h3>
-              <p>{new Date(item.fields.date).toLocaleString()}</p>
-              <p>{item.fields.amount}</p>
-            </div>
-          </>
-        )
-      })}
+      <div>
+        {incomeData.map(item => {
+          return (
+            <>
+              <div onClick={() => {
+                setOpenModal(true)
+                setModalData(item.fields)
+                setId(item.id)
+              }}
+                className="finance-card">
+                <h3>{item.fields.title}</h3>
+                <div className="finance-output">
+                  <p>{new Date(item.fields.date).toLocaleString()}</p>
+                </div>
+                <div className="finance-output">
+                  <p>{item.fields.amount.toLocaleString()}</p>
+                </div>
+              </div>
+            </>
+          )
+        })}
+      </div>
       {openModal ?
         <div className="modal">
           <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
