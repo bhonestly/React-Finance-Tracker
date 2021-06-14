@@ -114,7 +114,6 @@ export default function BudgetList({ data, reload }) {
             <button>Edit</button>
           </form>
           <button onClick={handleDelete}>Delete</button>
-          <button>Close</button>
         </div>
         : ""}
     </>

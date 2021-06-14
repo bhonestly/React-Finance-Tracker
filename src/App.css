@@ -71,7 +71,7 @@ h1 {
 
 #totals {
   background-color: rgb(47, 16, 184);
-  margin: 20px;
+  margin: 50px auto;
   border-radius: 10px;
   max-width: 400px;
   max-width: 300px;
@@ -163,10 +163,17 @@ input {
 img {
   height: 100px;
   object-fit: contain;
+  padding: 20px 0 0 0;
 }
 
 footer {
   bottom: 0;
+}
+
+.footer-nav > h3 {
+  color: white;
+  padding: 40px 0 0 0;
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 1280px) {
@@ -190,6 +197,8 @@ footer {
 @media only screen and (max-width: 700px) {
   .modal {
     inset: 20%;
+    max-height: 50vh;
+    max-width: 300px;
   }
   .finance-card {
     flex-flow: column nowrap;
@@ -201,7 +210,8 @@ footer {
 
 @media only screen and (max-width: 375px) {
   .modal {
-    inset: 10px;
+    inset: 50px;
+    max-height: 50vh;
   }
   .finance-card {
     box-sizing: border-box;

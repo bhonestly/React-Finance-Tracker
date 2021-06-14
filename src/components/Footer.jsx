@@ -6,8 +6,11 @@ export default function Footer() {
     <div>
       <div className="footer-nav">
         <Link to="/">
-          <img src="https://i.imgur.com/cKylCLt.png"/>
+          <img src="https://i.imgur.com/cKylCLt.png" />
         </Link>
+        <h3>
+          <em>Courtesy of <strong>Ernest Bizzell</strong></em>
+        </h3>
       </div>
     </div>
   )
