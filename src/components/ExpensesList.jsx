@@ -44,7 +44,6 @@ export default function ExpensesList({ data, reload }) {
   }
 
   const expenseData = data.filter(item => item.fields.type === "expenses")
-  console.log(expenseData)
 
   const handleEditSubmit = async (event) => {
     event.preventDefault()

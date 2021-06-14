@@ -46,7 +46,6 @@ export default function IncomesList({ data, reload }) {
   }
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
-  console.log(incomeData)
 
   const handleEditSubmit = async (event) => {
     event.preventDefault()

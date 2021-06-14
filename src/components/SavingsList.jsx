@@ -17,7 +17,6 @@ export default function SavingsList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    console.log(event.target.title, event.target.value)
     if (name === "amount") {
       value = event.target.valueAsNumber
     }
@@ -41,12 +40,10 @@ export default function SavingsList({ data, reload }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = await createSavingsItem(input)
-    console.log(result)
+    await createSavingsItem(input)
   }
 
   const savingData = data.filter(item => item.fields.type === "savings")
-  console.log(savingData)
 
   const handleEditSubmit = async (event) => {
     event.preventDefault()

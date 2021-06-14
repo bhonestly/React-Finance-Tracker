@@ -17,7 +17,6 @@ export default function BudgetList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    console.log(event.target.title, event.target.value)
     if (name === "amount") {
       value = event.target.valueAsNumber
     }
@@ -41,12 +40,10 @@ export default function BudgetList({ data, reload }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = await createBudgetItem(input)
-    console.log(result)
+    await createBudgetItem(input)
   }
 
   const budgetData = data.filter(item => item.fields.type === "budget")
-  console.log(budgetData)
 
   const handleEditSubmit = async (event) => {
     event.preventDefault()
