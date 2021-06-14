@@ -21,7 +21,6 @@ function App() {
 
   const fetchData = async () => {
     const res = await getAllFinances();
-    console.log(res)
     setData(res)
   };
 
