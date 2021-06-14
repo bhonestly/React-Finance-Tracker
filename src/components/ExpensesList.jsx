@@ -17,24 +17,18 @@ export default function ExpensesList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    // if (name === "amount") {
-    //   value = event.target.valueAsNumber
-    // }
-    
+
     setInput((prevInput) => ({
       ...prevInput,
-      [name]: name === "amount" ? parseInt(value): value
+      [name]: name === "amount" ? parseInt(value) : value
     }))
   }
 
   const handleEditChange = (event) => {
     let { name, value } = event.target
-    // if (name === "amount") {
-    //   parseInt(value)
-    // }
     setModalData((prevInput) => ({
       ...prevInput,
-      [name]: name === "amount" ? parseInt(value): value,
+      [name]: name === "amount" ? parseInt(value) : value,
     }))
   }
 

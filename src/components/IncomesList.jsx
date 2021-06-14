@@ -18,31 +18,25 @@ export default function IncomesList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    if (name === "amount") {
-      value = event.target.valueAsNumber
-    }
 
     setInput((prevInput) => ({
       ...prevInput,
-      [name]: value,
+      [name]: name === "amount" ? parseInt(value) : value
     }))
   }
 
   const handleEditChange = (event) => {
     let { name, value } = event.target
-    if (name === "amount") {
-      value = event.target.valueAsNumber
-    }
     setModalData((prevInput) => ({
       ...prevInput,
-      [name]: value,
+      [name]: name === "amount" ? parseInt(value) : value,
     }))
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
     await createIncomesItem(input)
-    
+
   }
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
@@ -63,22 +57,22 @@ export default function IncomesList({ data, reload }) {
   return (
     <>
       <div className="input-card">
-        <form onChange={handleChange} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <div className="row-one">
             <label><strong>Name:</strong></label>
-            <input type="text" name="title" />
+            <input onChange={handleChange} value={input.title} type="text" name="title" />
           </div>
           <div className="row-two">
             <label><strong>Type:</strong></label>
-            <input type="text" name="type" />
+            <input onChange={handleChange} value={input.type} type="text" name="type" />
           </div>
           <div className="row-three">
             <label><strong>Date:</strong></label>
-            <input type="date" name="date" />
+            <input onChange={handleChange} value={input.date} type="date" name="date" />
           </div>
           <div className="row-four">
             <label><strong>Amount:</strong></label>
-            <input type="number" name="amount" />
+            <input onChange={handleChange} value={input.amount} type="number" name="amount" />
           </div>
           <button className="input-button" type="submit">Create Income Item</button>
         </form>
@@ -107,22 +101,22 @@ export default function IncomesList({ data, reload }) {
       </div>
       {openModal ?
         <div className="modal">
-        <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
-          <div className="row-one-modal">
-            <input className="modal-input" name="title" type="text" value={modalData.title} />
-          </div>
-          <div className="row-two-modal">
-            <input className="modal-input" name="date" type="date" value={modalData.date} />
-          </div>
-          <div className="row-three-modal">
-            <input className="modal-input" name="amount" type="number" value={modalData.amount} />
-          </div>
-          <button className="modal-button">Edit</button>
-          <div className="modal-delete-button">
-            <button className="modal-button" onClick={handleDelete}>Delete</button>
-          </div>
-        </form>
-      </div>
+          <form onSubmit={handleEditSubmit}>
+            <div className="row-one-modal">
+              <input onChange={handleEditChange} className="modal-input" name="title" type="text" value={modalData.title} />
+            </div>
+            <div className="row-two-modal">
+              <input onChange={handleEditChange} className="modal-input" name="date" type="date" value={modalData.date} />
+            </div>
+            <div className="row-three-modal">
+              <input onChange={handleEditChange} className="modal-input" name="amount" type="number" value={modalData.amount} />
+            </div>
+            <button className="modal-button">Edit</button>
+            <div className="modal-delete-button">
+              <button className="modal-button" onClick={handleDelete}>Delete</button>
+            </div>
+          </form>
+        </div>
         : ""}
     </>
   )
