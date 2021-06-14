@@ -109,12 +109,20 @@ export default function ExpensesList({ data, reload }) {
       {openModal ?
         <div className="modal">
           <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
-            <input name="title" type="text" value={modalData.title} />
-            <input name="date" type="date" value={modalData.date} />
-            <input name="amount" type="number" value={modalData.amount} />
-            <button>Edit</button>
+            <div className="row-one-modal">
+              <input className="modal-input" name="title" type="text" value={modalData.title} />
+            </div>
+            <div className="row-two-modal">
+              <input className="modal-input" name="date" type="date" value={modalData.date} />
+            </div>
+            <div className="row-three-modal">
+              <input className="modal-input" name="amount" type="number" value={modalData.amount} />
+            </div>
+            <button className="modal-button">Edit</button>
+            <div className="modal-delete-button">
+              <button className="modal-button" onClick={handleDelete}>Delete</button>
+            </div>
           </form>
-          <button onClick={handleDelete}>Delete</button>
         </div>
         : ""}
     </>

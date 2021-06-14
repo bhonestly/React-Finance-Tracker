@@ -162,6 +162,19 @@ input {
   justify-content: center;
 }
 
+.modal-delete-button {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button {
+  margin: 3px;
+  background-color: rgb(242, 0, 137);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
 img {
   height: 100px;
   object-fit: contain;
