@@ -17,7 +17,6 @@ export default function SavingsList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-
     setInput((prevInput) => ({
       ...prevInput,
       [name]: name === "amount" ? parseInt(value) : value
