@@ -72,8 +72,7 @@ Financial tracking application to track bills, income, savings and budget with a
     -  Budget 
     -  Savings  
 2. OverView page displays Income, Expense, Budget and Savings totals
-3. Links to developer social media sites
-4. Links to Income, Expense, Budget and Savings views
+3. Links to Income, Expense, Budget and Savings views
 
 ## PostMVP
 1. Add second API
@@ -81,6 +80,7 @@ Financial tracking application to track bills, income, savings and budget with a
 3. Use local storage to save user inputs
 4. Add EDIT functionality to Income, Expense, Budget and Savings
 5. Add DELETE functionality to Income, Expense, Budget and Savings
+6. Links to developer social media sites
 
 ## Project Schedule
 |   Day   |   Deliverable   |   Status   |
@@ -98,20 +98,20 @@ Financial tracking application to track bills, income, savings and budget with a
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 |-----------|----------|----------------|---------------|-------------|
 | Build out Pre-Project Approval Materials | H | 3hrs | 4hrs | 4hrs |
-| Calling API | H | 2hrs | N/A | N/A |
-| Display data on OverView page | H | 3hrs | N/A | N/A |
-| Create New Income Component | H | 3hrs | N/A | N/A |
-| Create New Expense Component | H | 3hrs | N/A | N/A |
-| Create New Budget Component | H | 3hrs | N/A | N/A |
-| Create New Savings Component | H | 3hrs | N/A | N/A |
-| Create Delete Component | M | 3hrs | N/A | N/A |
-| Test/Refactor Code | M | 3hrs | N/A | N/A |
-| CSS for Menu Buttons | L | 3hrs | N/A | N/A |
-| CSS Responsive Design | L | 3hrs | N/A | N/A |
-| CSS Input fields | L | 3hrs | N/A | N/A |
-| CSS data view(income, expense, budget, savings) | L | 3hrs | N/A | N/A |
-| CSS for OverView page | L | 3hrs | N/A | N/A |
-| TOTAL HOURS | H | 40hrs | N/A| N/A | N/A |
+| Calling API | H | 2hrs | 2hrs | 2hrs |
+| Display data on OverView page | H | 3hrs | 3.5hrs | 3.5hrs |
+| Create New Income Component | H | 3hrs | 4hrs | 4hrs |
+| Create New Expense Component | H | 3hrs | 2hrs | 2hrs |
+| Create New Budget Component | H | 3hrs | 2hrs | 2hrs |
+| Create New Savings Component | H | 3hrs | 2hrs | 2hrs |
+| Create Delete Component | M | 3hrs | 30min | 30min |
+| Test/Refactor Code | M | 3hrs | 5hrs | 5hrs |
+| CSS for Menu Buttons | L | 3hrs | 3hrs | 3hrs |
+| CSS Responsive Design | L | 3hrs | 5hrs | 5hrs |
+| CSS Input fields | L | 3hrs | 3hrs | 3hrs |
+| CSS data view(income, expense, budget, savings) | L | 3hrs | 4hrs | 4hrs |
+| CSS for OverView page | L | 3hrs | 2hrs | 2hrs |
+| TOTAL HOURS | H | 40hrs | 39hrs | 39hrs |
 
 ## SWOT Analysis
 Strengths: Building Basic CRUD Structure
