@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { createSavingsItem } from '../services/api';
 import { editItem, deleteItem } from '../services/api'
 
@@ -85,9 +85,9 @@ export default function SavingsList({ data, reload }) {
         </form>
       </div>
       <div>
-        {savingData.map(item => {
+        {savingData.map((item, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <div onClick={() => {
                 setOpenModal(true)
                 setModalData(item.fields)
@@ -102,7 +102,7 @@ export default function SavingsList({ data, reload }) {
                   <p>{item.fields.amount.toLocaleString()}</p>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           )
         })}
       </div>

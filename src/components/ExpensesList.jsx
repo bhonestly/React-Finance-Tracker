@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { createExpensesItem } from '../services/api';
 import { editItem, deleteItem } from '../services/api'
 
@@ -17,7 +17,6 @@ export default function ExpensesList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    console.log(event.target.title, event.target.value)
     if (name === "amount") {
       value = event.target.valueAsNumber
     }
@@ -41,8 +40,7 @@ export default function ExpensesList({ data, reload }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = await createExpensesItem(input)
-    console.log(result)
+    await createExpensesItem(input)
   }
 
   const expenseData = data.filter(item => item.fields.type === "expenses")
@@ -85,9 +83,9 @@ export default function ExpensesList({ data, reload }) {
         </form>
       </div>
       <div>
-        {expenseData.map(item => {
+        {expenseData.map((item, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <div onClick={() => {
                 setOpenModal(true)
                 setModalData(item.fields)
@@ -102,7 +100,7 @@ export default function ExpensesList({ data, reload }) {
                   <p>{item.fields.amount.toLocaleString()}</p>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           )
         })}
       </div>

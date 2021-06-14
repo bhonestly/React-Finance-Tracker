@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { createIncomesItem } from '../services/api';
 import { editItem, deleteItem } from '../services/api'
+
 
 const defaultObject = {
   title: "",
@@ -17,7 +18,6 @@ export default function IncomesList({ data, reload }) {
 
   const handleChange = (event) => {
     let { name, value } = event.target
-    console.log(event.target.title, event.target.value)
     if (name === "amount") {
       value = event.target.valueAsNumber
     }
@@ -41,8 +41,8 @@ export default function IncomesList({ data, reload }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const result = await createIncomesItem(input)
-    console.log(result)
+    await createIncomesItem(input)
+    
   }
 
   const incomeData = data.filter(item => item.fields.type === "incomes")
@@ -85,9 +85,9 @@ export default function IncomesList({ data, reload }) {
         </form>
       </div>
       <div>
-        {incomeData.map(item => {
+        {incomeData.map((item, index) => {
           return (
-            <>
+            <React.Fragment key={index}>
               <div onClick={() => {
                 setOpenModal(true)
                 setModalData(item.fields)
@@ -102,28 +102,28 @@ export default function IncomesList({ data, reload }) {
                   <p>{item.fields.amount.toLocaleString()}</p>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           )
         })}
       </div>
       {openModal ?
         <div className="modal">
-          <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
-            <div className="row-one-modal">
-              <input className="modal-input" name="title" type="text" value={modalData.title} />
-            </div>
-            <div className="row-two-modal">
-              <input className="modal-input" name="date" type="date" value={modalData.date} />
-            </div>
-            <div className="row-three-modal">
-              <input className="modal-input" name="amount" type="number" value={modalData.amount} />
-            </div>
-            <button className="modal-button">Edit</button>
-            <div className="modal-delete-button">
-              <button className="modal-button" onClick={handleDelete}>Delete</button>
-            </div>
-          </form>
-        </div>
+        <form onSubmit={handleEditSubmit} onChange={handleEditChange}>
+          <div className="row-one-modal">
+            <input className="modal-input" name="title" type="text" value={modalData.title} />
+          </div>
+          <div className="row-two-modal">
+            <input className="modal-input" name="date" type="date" value={modalData.date} />
+          </div>
+          <div className="row-three-modal">
+            <input className="modal-input" name="amount" type="number" value={modalData.amount} />
+          </div>
+          <button className="modal-button">Edit</button>
+          <div className="modal-delete-button">
+            <button className="modal-button" onClick={handleDelete}>Delete</button>
+          </div>
+        </form>
+      </div>
         : ""}
     </>
   )
