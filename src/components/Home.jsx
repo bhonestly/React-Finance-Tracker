@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Home({data}) {
   
   const expenses = data.filter(item => item.fields.type === "expenses")
